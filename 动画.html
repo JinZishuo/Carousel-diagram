@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{background: url(img/2.jpg);}
+			div{/*帧动画*/
+				background: url(img/west1.png) 0 0 no-repeat;width: 200px;height: 200px;animation: div 1s steps(8) infinite;margin-top: 40%;margin-left: 20%;
+				/*-webkit-box-reflect: below 10px linear-gradient(transparent, white);*/}
+			@keyframes div {
+					to {
+						background-position: -1600px 0;
+					}
+				}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

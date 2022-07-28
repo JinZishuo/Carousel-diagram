@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{margin: 0 auto;padding: 0;user-select: none;}/*统配*/
+			.xiyouji{/*设置一个主体，保证元素大小可控*/
+				max-width: 100rem;height: 750px;width: 100%;display: flex;justify-content:center;flex-wrap:wrap;overflow: hidden;position: relative;}
+			.bg{/*背景动画*/
+				width: 100%;height: 100%;position: relative;animation: slideshow 50s linear infinite;}
+			.bg div{/*背景动画里面放的内容*/
+				width: 1200%;height: 100%;background: red;position: absolute;background: url(img/2.jpg) 0 0 repeat;margin-left: -300%;}
+			@keyframes slideshow {
+			  0%    { left: 0; }
+			  100%  { left: 200%; }
+			}
+			.renwu{/*放人物的块元素*/
+				width: 800px;height: 200px;position: absolute;margin-top: 400px;display: flex;justify-content:center;flex-wrap:wrap;}
+			@keyframes donghua {/*猴子和八戒帧动画的实现*/
+				to {
+					background-position: -1600px 0;
+				}
+			}
+			@keyframes donghua2 {/*三藏的帧动画*/
+					to {
+						background-position: -1360px 0;
+					}
+			}
+			@keyframes donghua3 {/*八戒的帧动画实现*/
+					to {
+						background-position: -1680px 0;
+					}
+			}
+			.houzi{background: url(img/west1.png) 0 0 no-repeat;animation: donghua 1s steps(8) infinite;width: 170px;height: 240px;margin-top: 10px;}/*猴子*/
+			.bajie{background: url(img/west2.png) 0 0 no-repeat;animation: donghua 1s steps(8) infinite;width: 170px;height: 240px;margin-top: 10px;}/*八戒*/
+			.sanzang{background: url(img/west4.png) 0 0 no-repeat;animation: donghua2 1s steps(8) infinite;width: 170px;height: 240px;margin-top: -20px;}/*三藏*/
+			.shaheshang{background: url(img/west3.png) 0 0 no-repeat;animation: donghua3 1s steps(8) infinite;width: 180px;height: 240px;}/*沙和尚*/
+		</style>
+	</head>
+	<body>
+		<div class="xiyouji">
+			<div class="bg">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="renwu">
+				<div class="houzi"></div>
+				<div class="bajie"></div>
+				<div class="sanzang"></div>
+				<div class="shaheshang"></div>
+			</div>
+		</div>
+	</body>
+</html>
